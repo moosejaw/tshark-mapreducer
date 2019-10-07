@@ -6,7 +6,7 @@ for line in sys.stdin:
     # And print it as a key-value pair of sourceIP<TAB> count
     line = line.strip().split(' ')
     source_ip = line[2]
+    
     # Print the key-value pair to stdout
     print(f'{source_ip}\t1')
-
 

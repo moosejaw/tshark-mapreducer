@@ -49,7 +49,7 @@ bin/hadoop jar bin/hadoop-streaming-3.1.2.jar -file /home/hduser/tshark-mapreduc
 This command assumes you:
 * Have started your Hadoop cluster
 * Cloned this repository to `~` and did not edit the folder name.
-* Have save your tshark output file in HDFS as `/user/hduser/tshark/tshark-output.txt`
+* Have saved your tshark output file in HDFS as `/user/hduser/tshark/tshark-output.txt`
 * Have `hadoop-streaming-3.1.2.jar` present in `/usr/local/hadoop/bin/`
 
 If not, you may need to edit some of the command according to how you have set up your files.

@@ -11,6 +11,7 @@ if __name__ == '__main__':
     # Write tshark stdout to output file
     with open(TSHARK_OUTPUT_FILE, 'w') as f:
         proc = subprocess.Popen(TSHARK_COMMANDS,
-                stdout=subprocess.PIPE)
+                stdout=f)
         proc.communicate()
-        f.write(proc.stdout.read())
+
+    print('Done capturing packets.')

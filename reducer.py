@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 # The following code was written by Dr. Thomas Win. It is not my work.
+# It has been adapted by me to run on Python 3.6.8.
 from operator import itemgetter
 import sys
 
@@ -31,11 +32,11 @@ for line in sys.stdin:
     else:
         if current_word:
             # write result to STDOUT
-            print '%s\t%s' % (current_word, current_count)
+            print(f'{current_word}\t{current_count}')
         current_count = count
         current_word = word
 
 # do not forget to output the last word if needed!
 if current_word == word:
-    print '%s\t%s' % (current_word, current_count)
+    print(f'{current_word}\t{current_count}')
 

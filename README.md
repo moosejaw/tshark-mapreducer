@@ -13,7 +13,12 @@ It was written for the CT6045 module at the University of Gloucestershire.
 `reducer.py` contains a script which 'reduces' the data passed to it from `mapper.py`. It counts every unique source IP address it finds in the original output and writes its result to a given output in HDFS.
 
 ## Running this code
-Start by cloning this repository to `hduser`'s `~` directory.
+Start by cloning this repository to `hduser`'s `~` directory. You should also be running these commands as `hduser`. You can become `hduser` by running:
+```bash
+su - hduser
+```
+
+And entering their password.
 
 Then, you should ensure you have tshark installed. If you don't, you can install it by running:
 ```bash

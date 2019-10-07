@@ -3,7 +3,7 @@
 import subprocess
 import sys
 
-TSHARK_NUMBER_OF_PACKETS = 10
+TSHARK_NUMBER_OF_PACKETS = 100
 TSHARK_COMMANDS = ['tshark', '-c', str(TSHARK_NUMBER_OF_PACKETS)]
 TSHARK_OUTPUT_FILE = '/home/hduser/tshark-output.txt'
 

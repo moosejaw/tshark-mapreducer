@@ -10,9 +10,9 @@ for line in sys.stdin:
     # And print it as a key-value pair of sourceIP<TAB> count
     line = line.strip()
 
-    # Remove an annoying consecutive whitespace in every other line
-    line = ' '.join(line.split())
-    line = line + '\n'
+    # Remove an annoying consecutive whitespace in every other line then
+    # split as normal
+    line = ' '.join(line.split()).split(' ')
 
     # Get the source IP address
     source_ip = line[2]

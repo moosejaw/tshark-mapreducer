@@ -13,18 +13,18 @@ It was written for the CT6045 module at the University of Gloucestershire.
 `reducer.py` contains a script which 'reduces' the data passed to it from `stdin`. It should count every unique source IP address it finds in the original output and write its result to a given output in HDFS.
 
 ## Running this code
-Start by cloning this repository to `hduser`'s `~` directory. You should also be running these commands as `hduser`. You can become `hduser` by running:
-```bash
-su - hduser
-```
-
-And entering their password.
-
 Then, you should ensure you have tshark installed. If you don't, you can install it by running:
 ```bash
 sudo apt-get update
 sudo apt-get install tshark
 ```
+
+Start by cloning this repository to `hduser`'s `~` directory. You should be running these commands as `hduser`. You can become `hduser` by running:
+```bash
+su - hduser
+```
+
+And entering their password.
 
 You *must* ensure that you allow permissions for non-sudoers to run tshark during the install process. You also need to ensure that `hduser` is added to the `wireshark` user group. Make sure you are logged in as someone who has sudo permissions, then you can do this by running:
 ```bash
@@ -39,7 +39,7 @@ You should then write the `tshark-output.txt` file to HDFS. You can do this by r
 /usr/local/bin/hadoop/hdfs dfs -copyFromLocal ~/tshark-output.txt /user/hduser/tshark/tshark-output.txt
 ```
 
-You need to ensure that `hadoop-straming-3.1.2.jar` is present in your `/usr/local/hadoop/bin/` directory. It is available on Moodle. 
+You need to ensure that `hadoop-straming-3.1.2.jar` is present in your `/usr/local/hadoop/bin/` directory. It is available on Moodle.
 
 Now set your working directory to your Hadoop install (`/usr/local/hadoop/`) and run the following command:
 ```bash
